@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.makeitsay/makeitsay",
+  "title": "MakeItSay",
+  "description": "Change the words in a screenshot or photo and keep the original font and layout.",
+  "version": "1.0.0",
+  "websiteUrl": "https://makeitsay.com/docs/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://makeitsay.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <your key>. Create a key at https://makeitsay.com/account/api",
+          "value": "Bearer {api_key}",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
