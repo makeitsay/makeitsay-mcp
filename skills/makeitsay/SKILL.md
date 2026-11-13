@@ -2,7 +2,7 @@
 name: makeitsay
 description: Change or remove the words in a screenshot or photo with MakeItSay and keep the original font, colour and background. Use when the user wants to edit text in an image, fix a typo or price on a sign, menu, poster or UI screenshot, translate the lettering in a photo, or remove a line of text from an image. Needs a MakeItSay API key in MAKEITSAY_API_KEY.
 author: MakeItSay
-version: 1.0.1
+version: 1.0.2
 tags: [image, text, ocr, screenshot, mcp]
 ---
 
@@ -26,7 +26,7 @@ If the `makeitsay` MCP server is connected (tools `replace_text`, `scan_text`, `
 
 1. If you are not sure how the text is written in the image, call `scan_text` first. It returns every line with its box (0 to 1000 from the top left). It is free but counts toward the scan limit (30 an hour, 100 a day per account), so skip it when the user already quoted the text.
 2. Once the user has agreed to the cost, call `replace_text` with `image_url` (public https) or `image_base64` and `replacements`: a list of `{ "from": "...", "to": "..." }`. `from` is the text as it appears in the image; an empty `to` removes the line. If the same text appears twice, add `hint`, for example "the line at the bottom".
-3. It waits up to 50 seconds. If the status is still `working`, call `get_edit` with the `edit_id` until it is `ready`.
+3. An edit usually takes about a minute, and `replace_text` waits up to 50 seconds. If the status is still `working`, call `get_edit` with the `edit_id` and `wait_seconds: 30` until it is `ready`.
 4. When `ready`, `result_url` is the edited PNG for one hour. Download it right away if the user wants the file.
 5. If a `from` is not found, nothing is charged and the error lists the lines that were read. Pick the closest line, confirm with the user if unsure, and try again.
 

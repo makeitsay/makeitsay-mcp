@@ -46,9 +46,9 @@ bearer_token_env_var = "MAKEITSAY_API_KEY"
 
 | Tool | What it does | Cost |
 | --- | --- | --- |
-| `replace_text` | Change or remove up to 20 lines of text in a PNG or JPG (https URL or base64), given as `{ from, to }`. Waits up to 50 seconds. | 1 credit per image; nothing if a line is not found |
+| `replace_text` | Change or remove up to 20 lines of text in a PNG or JPG (https URL or base64), given as `{ from, to }`. Takes about a minute; waits up to 50 seconds and returns `working` if still running. | 1 credit per image; nothing if a line is not found |
 | `scan_text` | Read every line of text with its position, to find the exact `from` text | Free; counts toward the scan limit |
-| `get_edit` | Status of an edit; when ready, a link to the edited PNG valid for one hour | Free |
+| `get_edit` | Status of an edit (optional `wait_seconds` up to 50); when ready, a link to the edited PNG valid for one hour | Free |
 | `get_credits` | Credits left on the account | Free |
 
 Listing tools works without a key; calling one needs it. IDs, certificates, receipts, invoices and bank documents are refused.

@@ -3,7 +3,7 @@
   "name": "com.makeitsay/makeitsay",
   "title": "MakeItSay",
   "description": "Change the words in a screenshot or photo and keep the original font and layout.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://makeitsay.com/docs/mcp",
   "remotes": [
     {
