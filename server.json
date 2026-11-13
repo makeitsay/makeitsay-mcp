@@ -19,5 +19,9 @@
         }
       ]
     }
-  ]
+  ],
+  "repository": {
+    "url": "https://github.com/makeitsay/makeitsay-mcp",
+    "source": "github"
+  }
 }

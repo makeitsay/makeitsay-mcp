@@ -67,6 +67,15 @@ npx skills add makeitsay/makeitsay-mcp
 
 or copy the folder into your agent's skills directory (for Claude Code, `~/.claude/skills/makeitsay/`). It uses the MCP tools when they are connected and the HTTP API with `curl` otherwise.
 
+
+### One-line prompt for any AI agent
+
+Paste into Claude Code, Cursor, Codex, or Gemini CLI:
+
+```text
+Read https://raw.githubusercontent.com/makeitsay/makeitsay-mcp/main/skills/makeitsay/SKILL.md and edit the text inside my image while keeping the font and layout.
+```
+
 ## Support
 
 support@makeitsay.com

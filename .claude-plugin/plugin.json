@@ -1,0 +1,27 @@
+{
+  "name": "makeitsay-mcp",
+  "version": "1.0.1",
+  "description": "Change the words in a screenshot or photo and keep the original font and layout.",
+  "author": {
+    "name": "MakeItSay",
+    "url": "https://makeitsay.com"
+  },
+  "homepage": "https://makeitsay.com/docs/mcp",
+  "repository": "https://github.com/makeitsay/makeitsay-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "edit-text-in-image",
+    "image-editing",
+    "ocr",
+    "design",
+    "skills",
+    "claude-code",
+    "cursor"
+  ],
+  "skills": [
+    "./skills"
+  ],
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "makeitsay": {
+      "type": "http",
+      "url": "https://makeitsay.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MAKEITSAY_API_KEY}"
+      }
+    }
+  }
+}
